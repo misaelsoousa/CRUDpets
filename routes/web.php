@@ -40,7 +40,9 @@ Route::prefix('cadastrar')->group(function () {
 
 Route::prefix('painel')->group(function () {
     Route::get('/', [PetsAdminController::class, 'painelPets'])->name('painel');
-    Route::get('/{id}/editar', [PetsAdminController::class, 'edit'])->name('painel-editar');
+    Route::get('/{id}/editar', [PetsAdminController::class, 'edit'])->where('id', '[0-9]+')->name('painel-editar');
+    Route::put('/{id}', [PetsAdminController::class, 'update'])->where('id', '[0-9]+')->name('painel-update');
+    Route::delete('/{id}', [PetsAdminController::class, 'destroy'])->where('id', '[0-9]+')->name('painel-destroy');
 });
 
 

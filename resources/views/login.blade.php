@@ -32,7 +32,7 @@
                                 <input type="password" name="password" class="form-control bg-dark border-dark text-light" id="password">
 
     
-                                <a href="{{ route('password.request') }}" class="link-light"><small>Esqueci minha senha</small></a>
+                                <a href="#" class="link-light"><small>Esqueci minha senha</small></a>
                             </div>
     
                             <div class="col-12">

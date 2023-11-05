@@ -87,62 +87,62 @@
                 <a href="{{route('painel')}}" class="btn btn-light">Voltar</a>
             </div>
 
-            <form action="{{ route('cadastrar-store') }}" method="POST" class="bg-custom rounded col-12 py-3 px-4">
-           
+            <form action="{{ route('painel-update', ['id'=>$pets->id]) }}" method="POST" class="bg-custom rounded col-12 py-3 px-4">
             @csrf
+            @method('PUT')
              <div class="mb-3 row">
                   <label for="nome" class="col-sm-1 col-form-label">Nome:</label>
              <div class="col-sm-2">
-                <input type="text"  value="{{$pets->nome}}" class="form-control bg-dark text-light border-dark" id="nome" placeholder="Ex: Tini">
+                <input type="text" name="nome" value="{{$pets->nome}}" class="form-control bg-dark text-light border-dark" id="nome" placeholder="Ex: Tini">
              </div>
                   <label for="especie" class="col-sm-1 col-form-label">Espécie:</label>
              <div class="col-sm-2">
-                      <input type="text" class="form-control bg-dark text-light border-dark" id="especie">
+                      <input type="text" name="especie" value="{{$pets->especie}}" class="form-control bg-dark text-light border-dark" id="especie">
              </div>
                    <label for="raca" class="col-sm-1 col-form-label">Raça:</label>
              <div class="col-sm-2">
-                <input type="text" class="form-control bg-dark text-light border-dark" id="raca">
+                <input type="text" name="raca" value="{{$pets->raca}}" class="form-control bg-dark text-light border-dark" id="raca">
             </div>
             </div>
 
             <div class="mb-3 row">
             <label for="idade" class="col-sm-1 col-form-label">Idade:</label>
             <div class="col-sm-1">
-                <input type="text" class="form-control bg-dark text-light border-dark" id="idade">
+                <input type="text" name="idade" value="{{$pets->idade}}" class="form-control bg-dark text-light border-dark" id="idade">
             </div>
             <label for="peso" class="col-sm-1 col-form-label">Peso:</label>
             <div class="col-sm-1">
-                <input type="text" class="form-control bg-dark text-light border-dark" id="peso">
+                <input type="text" name="peso" value="{{$pets->peso}}" class="form-control bg-dark text-light border-dark" id="peso">
             </div>
             <label for="porte" class="col-sm-1 col-form-label">Porte:</label>
             <div class="col-sm-1">
-                <input type="text" class="form-control bg-dark text-light border-dark" id="porte">
+                <input type="text" name="porte" value="{{$pets->porte}}" class="form-control bg-dark text-light border-dark" id="porte">
             </div>
             <label for="local" class="col-sm-1 col-form-label">Local:</label>
             <div class="col-sm-1">
-                <input type="text" class="form-control bg-dark text-light border-dark" id="local">
+                <input type="text" name="local" value="{{$pets->local}}" class="form-control bg-dark text-light border-dark" id="local">
             </div>
             <label for="sobre" class="col-sm-1 col-form-label">Sobre:</label>
             <div class="col-sm-1">
-                <input type="text" class="form-control bg-dark text-light border-dark" id="sobre">
+                <input type="text" name="sobre" value="{{$pets->sobre}}" class="form-control bg-dark text-light border-dark" id="sobre">
             </div>
 
             <label for="sexo" class="col-sm-1 col-form-label">Sexo:</label>
             <div class="col-sm-1">
-                <input type="text" class="form-control bg-dark text-light border-dark" id="sexo">
+                <input type="text" name="sexo" value="{{$pets->sexo}}" class="form-control bg-dark text-light border-dark" id="sexo">
             </div>
             </div>
 
             <div class="mb-3 row">
             <label for="status" class="col-sm-1 col-form-label">Status:</label>
             <div class="col-sm-1">
-                <input type="text" class="form-control bg-dark text-light border-dark" id="status">
+                <input type="text" name="status" value="{{$pets->status}}" class="form-control bg-dark text-light border-dark" id="status">
             </div>
             </div>
 
 
             <div class="d-flex justify-content-end">
-            <input type="submit" value="Cadastrar" class="btn btn-light">
+            <input type="submit" value="Atualizar" class="btn btn-light">
             </div>
 </form>
 

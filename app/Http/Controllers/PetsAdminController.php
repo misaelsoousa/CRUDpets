@@ -51,8 +51,27 @@ class PetsAdminController extends Controller
         }
     }
 
+    public function update(Request $request, $id)
+    {
+        $data = [
+            'nome' => $request->nome,
+            'especie' => $request->especie,
+            'raca' => $request->raca,
+            'idade' => $request->idade,
+            'peso' => $request->peso,
+            'porte' => $request->porte,
+            'local' => $request->local,
+            'sobre' => $request->sobre,
+            'sexo' => $request->sexo,
+            'status' => $request->status,
+        ];
+        Pet::where('id',$id)->update($data);
+        return redirect()->route('painel');
+    }
+
     public function destroy($id)
     {
-        dd($id);
+        Pet::where('id',$id)->delete();
+        return redirect()->route('painel');
     }
 }
