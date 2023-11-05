@@ -21,6 +21,6 @@ class Solicitante extends Model
 
     public function pet()
     {
-        return $this->belongsTo(Pet::class, 'idPet');
+        return $this->belongsTo(Pet::class, 'idPet', 'id');
     }
 }

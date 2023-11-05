@@ -149,7 +149,7 @@
                         @foreach($pets as $pet)
                         <div class="col-xxl-3 col-4">
                             <div class="card rounded overflow-hidden">
-                                <a href="{{route('adotar')}}">
+                                <a href="{{ route('adotar', ['id'=> $pet->id,'nome'=> $pet->nome ])}}">
                                     @foreach($imagens as $imagem)
                                     @if($imagem->idPet === $pet->id)
                                     <img src="{{ $imagem->imagem }}"  alt="" class="w-100 object-fit-cover" height="320">
@@ -175,7 +175,7 @@
                                     </div>
 
                                     <p class="mb-4 fs-md">{{$pet->local}}</p>
-                                    <a href="{{ route('adotar') }}?id={{ $pet->id }}" class="btn btn-custom-2 d-flex align-items-center justify-content-center gap-2 w-100">
+                                    <a href="{{ route('adotar', ['id'=> $pet->id, 'nome'=> $pet->nome ])}}" class="btn btn-custom-2 d-flex align-items-center justify-content-center gap-2 w-100">
                                         Quero Adotar
 
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">

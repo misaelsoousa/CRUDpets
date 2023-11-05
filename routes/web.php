@@ -23,10 +23,10 @@ Route::get('/', function () {
 
 Route::get('/queroadotar', [PetsController::class, 'RetornaPets'])->name('queroadotar');
 
-Route::get('/adotar', [PetsController::class, 'mostrar'])->name('adotar');
+Route::get('/adotar/{id}/{nome}', [PetsController::class, 'mostrar'])->name('adotar');
 
 Route::prefix('formulario')->group(function () {
-    Route::get('/', [SolicitanteController::class, 'index'])->name('formulario');
+    Route::get('/{id}/{nome}', [SolicitanteController::class, 'index'])->name('formulario');
     Route::get('/enviar', [SolicitanteController::class, 'create'])->name('formulario-create');
     Route::post('/', [SolicitanteController::class, 'store'])->name('formulario-store');
 });
@@ -40,7 +40,8 @@ Route::prefix('cadastrar')->group(function () {
 
 Route::prefix('painel')->group(function () {
     Route::get('/', [PetsAdminController::class, 'painelPets'])->name('painel')->middleware('auth');
-    Route::get('/solicitantes', [PetsAdminController::class, 'painelSolicitacoes'])->name('painel-solicitacoes')->middleware('auth');
+    Route::get('/solicitantes', [SolicitanteController::class, 'painelSolicitacoes'])->name('painel-solicitacoes')->middleware('auth');
+    Route::get('/solicitantes/filtrar', [SolicitanteController::class, 'filtrarSolicitantes'])->name('solicitantes-filtrar')->middleware('auth');
     Route::get('/filtrar', [PetsAdminController::class, 'filtrar'])->name('painel-filtrar')->middleware('auth');
     Route::get('/{id}/editar', [PetsAdminController::class, 'edit'])->where('id', '[0-9]+')->name('painel-editar')->middleware('auth');
     Route::put('/{id}', [PetsAdminController::class, 'update'])->where('id', '[0-9]+')->name('painel-update')->middleware('auth');

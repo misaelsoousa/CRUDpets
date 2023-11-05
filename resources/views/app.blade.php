@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
 </head>
 <body>
 <header class="border-bottom-1 shadow py-3">
@@ -21,7 +21,7 @@
                 <div class="col-4">
                     <a href="{{route('home')}}" title="KBR TEC" class="d-inline-block">
                         <h1>
-                            <img src="img_pets/logo.webp" alt="KBR TEC" width="150">
+                            <img src="/img_pets/logo.webp" alt="KBR TEC" width="150">
                         </h1>
                     </a>
                 </div>
@@ -54,7 +54,7 @@
 
                     <a href="#" class="btn btn-custom">Entre em contato</a>
                 </div>
-                <img src="img_pets/cartoon-cat-3.webp" alt="Gato" width="150">
+                <img src="/img_pets/cartoon-cat-3.webp" alt="Gato" width="150">
             </div>
         </div>
     </section>
@@ -67,7 +67,7 @@
                 </p>
 
                 <a href="https://www.kbrtec.com.br/" target="_blank" title="Acesse o site da KBR TEC">
-                    <img src="img_pets/kbrtec.webp" alt="KBRTEC" width="100">
+                    <img src="/img_pets/kbrtec.webp" alt="KBRTEC" width="100">
                 </a>
             </div>
         </div>

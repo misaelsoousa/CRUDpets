@@ -37,11 +37,6 @@ class PetsAdminController extends Controller
         return view('painel', ['pets' => $pets]);
     }
 
-    public function painelSolicitacoes()
-    {
-        $solicitantes = Solicitante::with('pet')->get();
-        return view('solicitacoes', compact('solicitantes'));
-    }
     public function edit($id)
     {
         $pets = Pet::where('id',$id)->first();
@@ -84,17 +79,15 @@ class PetsAdminController extends Controller
 
         $campos = ['nome', 'especie', 'raca', 'idade', 'peso', 'porte', 'local', 'sobre', 'sexo', 'status'];
 
-    foreach ($campos as $campo) {
-        if ($request->filled($campo)) {
-            $query->where($campo, 'LIKE', '%' . $request->input($campo) . '%');
+        foreach ($campos as $campo) {
+            if ($request->filled($campo)) {
+                
+                $query->where($campo, '=',  $request->input($campo));
+            }
         }
-    }
-        
 
-        $registros = $query->get();
+        $pets = $query->get();
 
-        $pets = Pet::all();
-
-        return view('painel',  compact('registros', 'pets'));
+        return view('painel',  ['pets' => $pets]);
     }
 }

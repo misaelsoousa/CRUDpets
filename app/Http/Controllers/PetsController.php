@@ -22,14 +22,13 @@ class PetsController extends Controller
         return view('queroadotar', ['pets' => $pets, 'imagens' => $imagens]);
     }
 
-    public function mostrar(Request $request)
+    public function mostrar(Request $request, $id)
     {
-        $codigo = $request->input('id'); 
-        $imagens = Imagens::where('idPet', $codigo)->get();
+        $imagens = Imagens::where('id', $id)->get();
         
         $imagemPrincipal = $imagens->shift();
 
-        $pets = Pet::where('id', $codigo)->first();
+        $pets = Pet::where('id', $id)->first();
         return view('integra', ['pets' => $pets, 'imagens' => $imagens, 'imagemPrincipal' => $imagemPrincipal]);
     }
 

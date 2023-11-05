@@ -4,34 +4,36 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     crossorigin="anonymous"> <link href="css/style.css" rel="stylesheet"> </head> <body class="bg-dark h-100"> <header
     class="bg-light py-2 shadow">
-<div class="container-fluid">
-    <div class="row">
-        <div style="width: 250px;"> <img src="img_admin/kbrtec.webp" alt="KBRTEC" height="60" width="150"
-            class="object-fit-contain"> </div> <div class="col dropdown d-flex align-items-center justify-content-end">
-            <div class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> Bem
-            vindo Admin! <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=?bi
-            bi-gear-fill ms-2 viewBox="0 0 16 16">
-            <path fill="#6c757D" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0
-                1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872
-                2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686
-                1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0
-                1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1
-                .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0
-                1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8
-                10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" /> </svg>
-        </div>
-
-        <ul class="dropdown-menu">
-            <li>
-                <a class="dropdown-item text-end" href="#">
-                    <small>Alterar Senha</small>
-                </a>
-                <a class="dropdown-item text-end" href="{{route('login.form')}}">
-                    <small>Sair</small>
-                </a>
-            </li>
-        </ul>
+<div class="container-fluid"> <div class="row"> <div style="width: 250px;">
+    <a href="{{route('home')}}">
+    <img src="img_admin/kbrtec.webp" alt="KBRTEC" height="60" width="150"
+    class="object-fit-contain"> </div>
+<div class="col dropdown d-flex align-items-center justify-content-end">
+    <div class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"> Bem
+    vindo Admin! <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=?bi
+    bi-gear-fill ms-2 viewBox="0 0 16 16">
+    </a>
+    <path fill="#6c757D" d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0
+    1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872
+    2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686
+    1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0
+    1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1
+    .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0
+    1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8
+    10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" /> </svg>
     </div>
+
+    <ul class="dropdown-menu">
+        <li>
+            <a class="dropdown-item text-end" href="#">
+                <small>Alterar Senha</small>
+            </a>
+            <a class="dropdown-item text-end" href="{{route('login.form')}}">
+                <small>Sair</small>
+            </a>
+        </li>
+    </ul>
+</div>
 </div>
 </div>
 </header>
@@ -52,31 +54,35 @@
                 </div>
 
                 <div class="collapse show" id="menu-usuario">
-                        <div class="bg-dark d-flex flex-column rounded mx-4 p-2 row-gap-1">
-                            <a href="{{route('cadastrar')}}" class="submenu-link link-light text-decoration-none rounded p-2 active">
-                                <small class="d-flex justify-content-between align-items-center">
-                                    Cadastrar
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                                    </svg>
-                                </small>
-                            </a>
-                            <a href="{{route('painel')}}" class="submenu-link link-light text-decoration-none rounded p-2 ">
-                                <small class="d-flex justify-content-between align-items-center">
-                                    Listagem Pets
-    
-                                </small>
-                            </a>
-                            <a href="{{route('painel-solicitacoes')}}" class="submenu-link link-light text-decoration-none rounded p-2 ">
-                                <small class="d-flex justify-content-between align-items-center">
-                                    Listagem Solicitações
-                                </small>
-                            </a>
-                        </div>
+                    <div class="bg-dark d-flex flex-column rounded mx-4 p-2 row-gap-1">
+                        <a href="{{route('cadastrar')}}"
+                            class="submenu-link link-light text-decoration-none rounded p-2 active">
+                            <small class="d-flex justify-content-between align-items-center">
+                                Cadastrar
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                                </svg>
+                            </small>
+                        </a>
+                        <a href="{{route('painel')}}" class="submenu-link link-light text-decoration-none rounded p-2 ">
+                            <small class="d-flex justify-content-between align-items-center">
+                                Listagem Pets
+
+                            </small>
+                        </a>
+                        <a href="{{route('painel-solicitacoes')}}"
+                            class="submenu-link link-light text-decoration-none rounded p-2 ">
+                            <small class="d-flex justify-content-between align-items-center">
+                                Listagem Solicitações
+                            </small>
+                        </a>
                     </div>
+                </div>
             </div>
 
-            <a href="{{route('login.form')}}"
+            <a href="{{route('login.logout')}}"
                 class="w-100 d-flex align-items-center gap-2 link-light text-decoration-none mt-2 py-3 px-3 ms-1 icon-link icon-link-hover"
                 style="--bs-icon-link-transform: translate3d(-.125rem, 0, 0);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
@@ -149,16 +155,24 @@
 
             <div class="form-group py-2 col-5">
                 <label for="sexo" class="text-capitalize text-light">Sexo</label>
-                <input type="text" class="form-control bg-dark text-light border-dark" required name="sexo" id="sexo">
+                <select name="sexo" class="form-control bg-dark text-light border-dark form-select" id="sexo">
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                </select>
             </div>
 
             <div class="form-group py-2 col-5">
-                <label for="status" class="text-capitalize text-light">Status</label>
-                <input type="text" class="form-control bg-dark text-light border-dark" name="status" id="status">
+            <label for="status" class="text-capitalize text-light">Status</label>
+                <select name="status" class="form-control bg-dark text-light border-dark form-select" id="status">
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="1">Ativado</option>
+                    <option value="0">Desativado</option>
+                </select>
             </div>
             <br>
             <label for="imagem" class="custom-upload-button custom-upload-label">
-                <input enctype="multipart/form-data" type="file" name="imagem" id="imagem">
+                <input enctype="multipart/form-data" multiple type="file" name="imagem" id="imagem">
             </label>
 
             <div class="col-12 d-flex  mt-4">
