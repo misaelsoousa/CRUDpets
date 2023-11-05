@@ -30,7 +30,11 @@
                     <nav class="d-flex gap-4 align-items-center justify-content-end">
                         <a href="{{route('home')}}">Home</a>
                         <a href="{{route('queroadotar')}}">Quero Adotar</a>
+                        @auth
                         <a href="{{route('painel')}}" class="btn btn-custom">Admin</a>
+                        @else
+                        <a href="{{route('login.form')}}" class="btn btn-custom">Login</a>
+                        @endauth
                     </nav>
                 </div>
             </div>

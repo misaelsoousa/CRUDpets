@@ -27,10 +27,14 @@
                 </div>
 
                 <div class="col-8">
-                    <nav class="d-flex gap-4 align-items-center justify-content-end">
+                <nav class="d-flex gap-4 align-items-center justify-content-end">
                         <a href="{{route('home')}}">Home</a>
                         <a href="{{route('queroadotar')}}">Quero Adotar</a>
-                        <a href="{{route('login')}}" class="btn btn-custom">Admin</a>
+                        @auth
+                        <a href="{{route('painel')}}" class="btn btn-custom">Admin</a>
+                        @else
+                        <a href="{{route('login.form')}}" class="btn btn-custom">Login</a>
+                        @endauth
                     </nav>
                 </div>
             </div>
@@ -42,7 +46,18 @@
         @yield('content')
 
 
+    <section class="bg-custom py-3" style="background-color: #FFECCE;">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center gap-3">
+                <div class="d-flex flex-column align-items-end">
+                    <h2 class="bowlby-one text-uppercase h4 m-0">Alguma dúvida?</h2>
 
+                    <a href="#" class="btn btn-custom">Entre em contato</a>
+                </div>
+                <img src="img_pets/cartoon-cat-3.webp" alt="Gato" width="150">
+            </div>
+        </div>
+    </section>
 
     <footer class="py-4">
         <div class="container">

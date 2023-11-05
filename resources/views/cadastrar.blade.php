@@ -26,7 +26,7 @@
                 <a class="dropdown-item text-end" href="#">
                     <small>Alterar Senha</small>
                 </a>
-                <a class="dropdown-item text-end" href="{{route('login')}}">
+                <a class="dropdown-item text-end" href="{{route('login.form')}}">
                     <small>Sair</small>
                 </a>
             </li>
@@ -52,29 +52,31 @@
                 </div>
 
                 <div class="collapse show" id="menu-usuario">
-                    <div class="bg-dark d-flex flex-column rounded mx-4 p-2 row-gap-1">
-                        <a href="{{route('cadastrar')}}"
-                            class="submenu-link link-light text-decoration-none rounded p-2 active">
-                            <small class="d-flex justify-content-between align-items-center">
-                                Cadastrar
-
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                                </svg>
-                            </small>
-                        </a>
-                        <a href="{{route('painel')}}" class="submenu-link link-light text-decoration-none rounded p-2">
-                            <small class="d-flex justify-content-between align-items-center">
-                                Listagem
-                            </small>
-                        </a>
+                        <div class="bg-dark d-flex flex-column rounded mx-4 p-2 row-gap-1">
+                            <a href="{{route('cadastrar')}}" class="submenu-link link-light text-decoration-none rounded p-2 active">
+                                <small class="d-flex justify-content-between align-items-center">
+                                    Cadastrar
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                </small>
+                            </a>
+                            <a href="{{route('painel')}}" class="submenu-link link-light text-decoration-none rounded p-2 ">
+                                <small class="d-flex justify-content-between align-items-center">
+                                    Listagem Pets
+    
+                                </small>
+                            </a>
+                            <a href="{{route('painel-solicitacoes')}}" class="submenu-link link-light text-decoration-none rounded p-2 ">
+                                <small class="d-flex justify-content-between align-items-center">
+                                    Listagem Solicitações
+                                </small>
+                            </a>
+                        </div>
                     </div>
-                </div>
             </div>
 
-            <a href="{{route('login')}}"
+            <a href="{{route('login.form')}}"
                 class="w-100 d-flex align-items-center gap-2 link-light text-decoration-none mt-2 py-3 px-3 ms-1 icon-link icon-link-hover"
                 style="--bs-icon-link-transform: translate3d(-.125rem, 0, 0);">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"

@@ -17,5 +17,10 @@ class Solicitante extends Model
         'email',
         'celular',
         'data_nas',
-        ];
+    ];
+
+    public function pet()
+    {
+        return $this->belongsTo(Pet::class, 'idPet');
+    }
 }

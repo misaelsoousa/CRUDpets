@@ -33,23 +33,7 @@ class PetsController extends Controller
         return view('integra', ['pets' => $pets, 'imagens' => $imagens, 'imagemPrincipal' => $imagemPrincipal]);
     }
 
-public function filtrarPet(Request $request)
-    {
-    $pets = Pet::all();
-    $filtros = $request->all();
 
-    $query = Pet::query();
-
-    foreach ($filtros as $campo => $valor) {
-        if (!empty($valor)) {
-            $query->where($campo, 'like', '%' . $valor . '%');
-        }
-    }
-
-    $animais = $query->get();
-
-    return view('integra', ['pets' => $pets, 'animais' => $animais]);
-    }
 
     
     

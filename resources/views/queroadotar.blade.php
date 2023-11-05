@@ -50,7 +50,7 @@
         <div class="container-fluid">
             <div class="row">
                 <aside style="width: 320px;">
-                    <form method="GET" action="{{route('filtrarpet')}}" id="filtar" name="filtrar" action="/" class="bg-custom rounded p-3 text-uppercase pt-4 mt-2 position-sticky" style="top: 1rem;">
+                    <form method="GET" action="#" id="filtar" name="filtrar" action="/" class="bg-custom rounded p-3 text-uppercase pt-4 mt-2 position-sticky" style="top: 1rem;">
                         <div class="mb-3 text-light bowlby-one">
                             Filtros
                         </div>

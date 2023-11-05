@@ -16,14 +16,22 @@
                     <img src="img_admin/kbrtec.webp" alt="KBRTEC" height="200" width="200" class="object-fit-contain">
                 </div>
                 <div class="col-6 d-flex align-items-center p-5">
-                    <form method="POST" action="{{ route('login') }}" class="form w-100">
+                    @if($mensagem = Session::get('erro'))
+                    {{$mensagem}}
+                    @endif
+                    @if($errors->any())
+                        @foreach($errors->all() as $error)
+                            {{$error}}<br>
+                        @endforeach
+                    @endif
+                    <form method="POST" action="{{ route('login.auth') }}" class="form w-100">
                         @csrf
                         <h2 class="h4 text-light mb-4">Painel Administrativo</h2>
     
                         <div class="row row-gap-3">
                             <div class="col-12 form-group text-light">
                                 <label for="email">E-mail:</label>
-                                <input type="email" name="email" value="{{ old('email') }}" class="form-control bg-dark border-dark text-light" id="email" placeholder="example@kbrtec.com.br">
+                                <input type="email" name="email" class="form-control bg-dark border-dark text-light" id="email" placeholder="example@kbrtec.com.br">
 
                             </div>
     

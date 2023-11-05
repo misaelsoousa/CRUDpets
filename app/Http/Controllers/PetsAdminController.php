@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Pet;
+use App\Models\Solicitante;
 use App\Models\Imagens;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -11,7 +12,6 @@ class PetsAdminController extends Controller
 {
     public function index()
     {
-        $pets = Pet::all();
         return view('cadastrar');
     }
     public function create()
@@ -19,7 +19,6 @@ class PetsAdminController extends Controller
         $pets = Pet::all();
         return view('painel', ['pets' => $pets]);
     }
-
     public function store(Request $request)
     {
         $file = $request->file('imagem');
@@ -38,7 +37,11 @@ class PetsAdminController extends Controller
         return view('painel', ['pets' => $pets]);
     }
 
-
+    public function painelSolicitacoes()
+    {
+        $solicitantes = Solicitante::with('pet')->get();
+        return view('solicitacoes', compact('solicitantes'));
+    }
     public function edit($id)
     {
         $pets = Pet::where('id',$id)->first();
@@ -73,5 +76,25 @@ class PetsAdminController extends Controller
     {
         Pet::where('id',$id)->delete();
         return redirect()->route('painel');
+    }
+
+    public function filtrar(Request $request)
+    {
+        $query = Pet::query();
+
+        $campos = ['nome', 'especie', 'raca', 'idade', 'peso', 'porte', 'local', 'sobre', 'sexo', 'status'];
+
+    foreach ($campos as $campo) {
+        if ($request->filled($campo)) {
+            $query->where($campo, 'LIKE', '%' . $request->input($campo) . '%');
+        }
+    }
+        
+
+        $registros = $query->get();
+
+        $pets = Pet::all();
+
+        return view('painel',  compact('registros', 'pets'));
     }
 }
