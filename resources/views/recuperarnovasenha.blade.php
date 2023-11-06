@@ -13,16 +13,16 @@
         <div class="container">
             <div class="bg-custom mx-auto row col-8 rounded shadow-sm overflow-hidden">
                 <div class="col-6 d-flex align-items-center p-5">
-                    <form method="POST" action="{{ route('painel-recuperarsenha') }}" class="form w-100">
+                    <form method="POST" action="{{ route('recuperar-novasenha') }}" class="form w-100">
                         @csrf
                         <h2 class="h4 text-light mb-4">Recuperar senha</h2>
     
                         <div class="row row-gap-3">
                             <div class="col-12 form-group text-light">
-                                <label for="email">E-mail:</label>
-                                <input type="email" name="email" class="form-control bg-dark border-dark text-light" id="email" placeholder="example@kbrtec.com.br">
+                                <label for="senha">Nova senha:</label>
+                                <input type="password" name="password" class="form-control bg-dark border-dark text-light" id="password" placeholder="example@kbrtec.com.br">
                             </div>
-    
+                            <input type="hidden" name="id" value="{{$id}}" class="form-control bg-dark border-dark text-light" id="id" placeholder="example@kbrtec.com.br">
                             <div class="col-12">
                                 <button type="submit" class="btn btn-light mt-3">Enviar</button>
                             </div>
@@ -32,6 +32,7 @@
             </div>
         </div>
     </main>
+
 
     <footer class="bg-custom text-light text-center py-4">
         <small>© Copyright 2023 - KBR TEC - Todos os Direitos Reservados</small>

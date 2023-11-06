@@ -23,6 +23,7 @@
     10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" /> </svg>
     </div>
 
+
     <ul class="dropdown-menu">
         <li>
             <a class="dropdown-item text-end" href="#">
@@ -38,6 +39,15 @@
 </div>
 </header>
 
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
 <div class="d-flex" style="min-height: calc(100vh - 76px - 72px);">
     <aside class="bg-custom text-light py-4" style="width: 250px;">
         <div class="menu">
@@ -50,7 +60,7 @@
                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                     </svg>
 
-                    Usuários
+                    Pets
                 </div>
 
                 <div class="collapse show" id="menu-usuario">
@@ -114,12 +124,12 @@
             @csrf
             <div class="form-group py-2 col-5">
                 <label for="nome" class="text-capitalize text-light">Nome:</label>
-                <input type="text" class="form-control bg-dark text-light border-dark" name="nome" id="nome">
+                <input type="text" pattern="[A-Za-z]+" class="form-control bg-dark text-light border-dark" name="nome" id="nome">
             </div>
 
             <div class="form-group py-2 col-5">
                 <label for="especie" class="text-capitalize text-light">Espécie </label>
-                <input type="text" class="form-control bg-dark text-light border-dark" name="especie" id="especie"
+                <input type="text" pattern="[A-Za-z]+" class="form-control bg-dark text-light border-dark" name="especie" id="especie"
                     value="{{ request('nome') }}">
             </div>
 
@@ -172,7 +182,7 @@
             </div>
             <br>
             <label for="imagem" class="custom-upload-button custom-upload-label">
-                <input enctype="multipart/form-data" multiple type="file" name="imagem" id="imagem">
+                <input required enctype="multipart/form-data" multiple type="file" name="imagem" id="imagem">
             </label>
 
             <div class="col-12 d-flex  mt-4">
@@ -186,12 +196,19 @@
     </main>
 </div>
 
+
 <footer class="bg-custom text-light text-center py-4">
     <small>© Copyright 2023 - KBR TEC - Todos os Direitos Reservados</small>
 </footer>
-
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var input = document.getElementById("idade");
+    Inputmask({ mask: '99/99/9999' }).mask(input); // Substitua '99/99/9999' pela máscara desejada
+  });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous"></script>
+    <script src="{{ asset('js/inputmask.js') }}"></script>
 </body>
 
 </html>

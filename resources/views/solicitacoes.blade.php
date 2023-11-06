@@ -1,21 +1,21 @@
 <!DOCTYPE html> <html lang="pt-br" class="h-100"> <head> <meta charset="UTF-8"> <meta name="viewport"
-    content="width=device-width, initial-scale=1.0"> <title>KBRTEC ADMIN </title>
+    content="width=device-width, initial-scale=1.0"> <title>KBRTEC ADMIN </title> <link rel="icon" type="image/x-icon"
+    href="/img_admin/favicon.ico"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet" crossorigin="anonymous">
+<link href="/css/style.css" rel="stylesheet">
+</head>
 
-<link rel="icon" type="image/x-icon" href="/img_admin/favicon.ico"> <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    crossorigin="anonymous"> <link href="/css/style.css" rel="stylesheet"> </head> <body class="bg-dark h-100"> <header
-    class="bg-light py-2 shadow">
-<div class="container-fluid">
-    <div class="row">
+<body class="bg-dark h-100">
+    <header class="bg-light py-2 shadow"> <div class="container-fluid"> <div class="row">
         <div style="width: 250px;"> <img src="/img_admin/kbrtec.webp" alt="KBRTEC" height="60" width="150"
-            class="object-fit-contain"> </div>
+        class="object-fit-contain"> </div>
 
-            <div class="col dropdown d-flex align-items-center justify-content-end">
-            <div class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                Bem vindo Admin!
+        <div class="col dropdown d-flex align-items-center justify-content-end">
+        <div class="d-flex align-items-center dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        Bem vindo Admin!
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-gear-fill ms-2" viewBox="0 0 16 16"> <path fill="#6c757D" d="M9.405
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        class="bi bi-gear-fill ms-2" viewBox="0 0 16 16"> <path fill="#6c757D" d="M9.405
                     1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0
                     1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872
                     2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705
@@ -27,22 +27,23 @@
                 </svg>
                 </div>
 
-                <ul class="dropdown-menu"> <li> <a class="dropdown-item text-end" href="#">
+                <ul class=" dropdown-menu">
+            <li> <a class="dropdown-item text-end" href="#">
                     <small>Alterar Senha</small>
                     </a>
                     <a class="dropdown-item text-end" href="{{route('login.form')}}">
                         <small>Sair</small>
                         </a>
-                        </li>
-                        </ul>
-                        </div>
+            </li>
+            </ul>
+            </div>
             </div>
             </div>
             </header>
 
             <div class="d-flex" style="min-height: calc(100vh - 76px - 72px);"> <aside class="bg-custom text-light py-4"
-                style="width: 250px;"> <div class="menu">
-                <div class="item">
+            style="width: 250px;"> <div class="menu">
+            <div class="item">
                 <div class="w-100 d-flex align-items-center gap-2 link-light text-decoration-none mt-2 py-3 px-3
                 border-start border-light border-4"
                 type="button" data-bs-toggle="collapse" data-bs-target="#menu-usuario" aria-expanded="true"
@@ -53,38 +54,38 @@
                 </svg>
 
                 Usuários
-            </div>
+                </div>
 
-            <div class="collapse show" id="menu-usuario">
+                <div class="collapse show" id="menu-usuario">
                 <div class="bg-dark d-flex flex-column rounded mx-4 p-2 row-gap-1">
-                    <a href="{{route('cadastrar')}}" class="submenu-link link-light text-decoration-none rounded p-2">
-                        <small class="d-flex justify-content-between align-items-center">
-                            Cadastrar
-                        </small>
+                <a href="{{route('cadastrar')}}" class="submenu-link link-light text-decoration-none rounded p-2">
+                    <small class="d-flex justify-content-between align-items-center">
+                    Cadastrar
+                    </small>
                     </a>
                     <a href="{{route('painel')}}" class="submenu-link link-light text-decoration-none rounded p-2">
-                        <small class="d-flex justify-content-between align-items-center">
-                            Listagem Pets
+                    <small class="d-flex justify-content-between align-items-center">
+                        Listagem Pets
 
-                        </small>
+                    </small>
                     </a>
                     <a href="{{route('painel')}}"
-                        class="submenu-link link-light text-decoration-none rounded p-2  active">
-                        <small class="d-flex justify-content-between align-items-center">
-                            Listagem Solicitações
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                            </svg>
-                        </small>
-                    </a>
+                    class="submenu-link link-light text-decoration-none rounded p-2 active">
+                    <small class="d-flex justify-content-between align-items-center">
+                    Listagem Solicitações
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class=?bi
+                        bi-chevron-right" viewBox="0 0 16 16"> <path fill-rule="evenodd"
+                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                    </svg>
+                    </small>
+                </a>
+                </div>
                 </div>
             </div>
-        </div>
 
-        <a href="{{route('login.form')}}"
-            class="w-100 d-flex align-items-center gap-2 link-light text-decoration-none mt-2 py-3 px-3 ms-1 icon-link icon-link-hover"
+            <a href="{{route('login.form')}}"
+            class="w-100 d-flex align-items-center gap-2 link-light text-decoration-none mt-2 py-3 px-3 ms-1 icon-link
+            icon-link-hover"
             style="--bs-icon-link-transform: translate3d(-.125rem, 0, 0);">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
                 class="bi bi-box-arrow-left" viewBox="0 0 16 16">
@@ -95,203 +96,217 @@
             </svg>
 
             Sair
-        </a>
-    </div>
-    </aside>
-
-    <main class="col h-100 text-light p-4">
-        <div class="d-flex justify-content-between mb-4">
-            <h1 class="h3">Usuários</h1>
-
-            <div class="d-flex gap-2">
-                <a href="#" class="btn btn-light" title="PDF">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                        class="bi bi-filetype-pdf" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z" />
-                    </svg>
-                </a>
-
-                <a href="#" class="btn btn-light" title="Excel">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                        class="bi bi-file-earmark-excel" viewBox="0 0 16 16">
-                        <path
-                            d="M5.884 6.68a.5.5 0 1 0-.768.64L7.349 10l-2.233 2.68a.5.5 0 0 0 .768.64L8 10.781l2.116 2.54a.5.5 0 0 0 .768-.641L8.651 10l2.233-2.68a.5.5 0 0 0-.768-.64L8 9.219l-2.116-2.54z" />
-                        <path
-                            d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
-                    </svg>
-                </a>
-
-                <a href="{{route('cadastrar')}}" class="btn btn-light">+ Cadastrar Usuário</a>
+            </a>
             </div>
-        </div>
+            </aside>
 
-        <div class="d-flex justify-content-between align-items-end mb-3">
-            <form method="GET" action="{{route('solicitantes-filtrar')}}" class="bg-custom rounded col-12 py-3 px-4">
+            <main class="col h-100 text-light p-4">
+                <div class="d-flex justify-content-between mb-4">
+                    <h1 class="h3">Usuários</h1>
 
-                <div class="row align-items-end row-gap-4">
-                    <div class="col-2 d-flex flex-wrap">
-                        <label for="nome" class="col-form-label">Solicitante:</label>
-                        <div class="col-12">
-                            <input type="text" class="form-control bg-dark text-light border-dark" name="solicitante"
-                                id="nome">
-                        </div>
-                    </div>
-                    <div class="col-2 d-flex flex-wrap">
-                        <label for="idPet" class="col-form-label">Nome do animal:</label>
-                        <div class="col-12">
-                            <input type="text" class="form-control bg-dark text-light border-dark" name="idPet"
-                                id="idPet">
-                        </div>
-                    </div>
-                    <div class="col-2 d-flex flex-wrap">
-                        <label for="raca" class="col-form-label">Data de envio:</label>
-                        <div class="col-12">
-                            <input type="datetime-local" class="form-control bg-dark text-light border-dark"
-                                name="created_at" id="raca">
-                        </div>
-                    </div>
+                    <div class="d-flex gap-2">
 
-                    <div class="col-1 d-flex justify-content-end">
-                        <button type="submit" class="btn btn-light w-100">Filtrar</button>
+                        <a href="{{ route('export-solicitacoes') }}" class="btn btn-light" title="Excel">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                class="bi bi-file-earmark-excel" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.884 6.68a.5.5 0 1 0-.768.64L7.349 10l-2.233 2.68a.5.5 0 0 0 .768.64L8 10.781l2.116 2.54a.5.5 0 0 0 .768-.641L8.651 10l2.233-2.68a.5.5 0 0 0-.768-.64L8 9.219l-2.116-2.54z" />
+                                <path
+                                    d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z" />
+                            </svg>
+                        </a>
+
+                        <a href="{{route('cadastrar')}}" class="btn btn-light">+ Cadastrar Pet</a>
                     </div>
                 </div>
-            </form>
-        </div>
 
-        <div class="bg-custom rounded overflow-hidden">
+                <div class="d-flex justify-content-between align-items-end mb-3">
+                    <form method="GET" action="{{route('solicitantes-filtrar')}}"
+                        class="bg-custom rounded col-12 py-3 px-4">
 
-            <table class="table mb-0 table-custom table-dark align-middle">
-                <thead>
-                    <tr>
-                        <th scope="col" class="text-uppercase">Data de envio:</th>
-                        <th scope="col" class="text-uppercase">Solicitante:</th>
-                        <th scope="col" class="text-uppercase">Nome do Animal:</th>
-                        <th scope="col" class="text-uppercase text-center">Ações</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($solicitantes as $solicitante)
-                    <tr>
-                        <td>{{$solicitante->created_at}}</td>
-                        <td>{{$solicitante->solicitante}}</td>
-                        <td>
-                            @if ($pet = $pets->where('id', $solicitante->idPet)->first())
-                            {{ $pet->nome }}
-                            @else
-                            Nenhum pet encontrado
-                            @endif
-                        </td>
-
-                        <td>
-                            <div class="d-flex justify-content-center">
-                                <button data-id="{{ $solicitante->id }}" type="button"
-                                    class="btn btn-light d-flex justify-content-center align-items-center rounded-circle p-2 mx-2"
-                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-search" viewBox="0 0 16 16">
-                                        <path
-                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                                    </svg>
-                                </button>
-                                <form action="" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit"
-                                        class="btn btn-danger d-flex justify-content-center align-items-center rounded-circle p-2 mx-2"
-                                        title="Deletar">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                            fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
-                                            <path fill="#FFF"
-                                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
-                                            <path fill="#FFF"
-                                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
-                                        </svg>
-                                    </button>
-                                </form>
+                        <div class="row align-items-end row-gap-4">
+                            <div class="col-2 d-flex flex-wrap">
+                                <label for="nome" class="col-form-label">Solicitante:</label>
+                                <div class="col-12">
+                                    <input type="text" class="form-control bg-dark text-light border-dark"
+                                        name="solicitante" id="nome">
+                                </div>
                             </div>
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
+                            <div class="col-2 d-flex flex-wrap">
+                                <label for="idPet" class="col-form-label">Nome do animal:</label>
+                                <div class="col-12">
+                                    <input type="text" class="form-control bg-dark text-light border-dark" name="idPet"
+                                        id="idPet">
+                                </div>
+                            </div>
+                            <div class="col-2 d-flex flex-wrap">
+                                <label for="raca" class="col-form-label">Data de envio:</label>
+                                <div class="col-12">
+                                    <input type="datetime-local" class="form-control bg-dark text-light border-dark"
+                                        name="created_at" id="raca">
+                                </div>
+                            </div>
 
-        <nav aria-label="navigation">
-            <ul class="pagination justify-content-end pt-4 pb-2">
-                <li class="page-item"><a class="page-link bg-custom border-dark link-light" href="#">Anterior</a></li>
-                <li class="page-item"><a class="page-link bg-custom border-dark link-light" href="#">1</a></li>
-                <li class="page-item"><a class="page-link bg-custom border-dark link-light" href="#">2</a></li>
-                <li class="page-item"><a class="page-link bg-custom border-dark link-light" href="#">3</a></li>
-                <li class="page-item"><a class="page-link bg-custom border-dark link-light" href="#">Próximo</a></li>
-            </ul>
-        </nav>
-    </main>
-</div>
+                            <div class="col-1 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-light w-100">Filtrar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
 
-<footer class="bg-custom text-light text-center py-4">
-    <small>© Copyright 2023 - KBR TEC - Todos os Direitos Reservados</small>
-</footer>
+                <div class="bg-custom rounded overflow-hidden">
 
+                    <table class="table mb-0 table-custom table-dark align-middle">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-uppercase">Data de envio:</th>
+                                <th scope="col" class="text-uppercase">Solicitante:</th>
+                                <th scope="col" class="text-uppercase">Nome do Animal:</th>
+                                <th scope="col" class="text-uppercase text-center">Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($solicitantes as $solicitante)
+                            <tr>
+                                <td>{{$solicitante->created_at}}</td>
+                                <td>{{$solicitante->solicitante}}</td>
+                                <td>
+                                    @if ($pet = $pets->where('id', $solicitante->idPet)->first())
+                                    {{ $pet->nome }}
+                                    @else
+                                    Nenhum pet encontrado
+                                    @endif
+                                </td>
 
+                                <td>
+                                    <div class="d-flex justify-content-center">
+                                        <button data-id="{{ $solicitante->id }}" type="button"
+                                            class="btn btn-light d-flex justify-content-center align-items-center rounded-circle p-2 mx-2 detalhes-solicitacoes"
+                                            data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                            </svg>
+                                        </button>
+                                        
+                                    </div>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
 
-                <script>
-                    $(document).on('click', '[data-bs-target="#exampleModal"]', function () {
-                        var id = $(this).data('id'); // Captura o ID do solicitante
-                
+                <nav aria-label="navigation">
+                        <ul class="pagination justify-content-end pt-4 pb-2">
+                            @if ($solicitantes->lastPage() > 1)
+                            @if ($solicitantes->currentPage() > 1)
+                            <li class="page-item"><a class="page-link bg-custom border-dark link-light"
+                                    href="{{ $solicitantes->previousPageUrl() }}">Anterior</a></li>
+                            @endif
 
-                        $('#solicitanteId').val(id);
-                
-                        $('#exampleModal').modal('show');
-                    });
-                </script>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered text-light">
-        <div class="modal-content bg-custom">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Usuário</h1>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+                            @foreach ($solicitantes->getUrlRange(max($solicitantes->currentPage() - 2, 1), min($solicitantes->lastPage(),
+                            $solicitantes->currentPage() + 2)) as $page => $url)
+                            <li class="page-item{{ $page == $solicitantes->currentPage() ? ' active' : '' }}"><a
+                                    class="page-link bg-custom border-dark link-light" href="{{ $url }}">{{ $page }}</a>
+                            </li>
+                            @endforeach
+
+                            @if ($solicitantes->currentPage() < $solicitantes->lastPage())
+                                <li class="page-item"><a class="page-link bg-custom border-dark link-light"
+                                        href="{{ $solicitantes->nextPageUrl() }}">Próximo</a></li>
+                                @endif
+                                @endif
+                        </ul>
+                    </nav>
+            </main>
             </div>
-            <div class="modal-body d-flex flex-wrap row-gap-4">
-                <div class="col-12">
-                    <input type="text" id="solicitanteId" value="">
-                </div>
-                <div class="col-6">
-                    <div><small>Solicitante:</small></div>
-                    <div>{{$solicitante->solicitante}}</div>
-                </div>
 
-                <div class="col-6">
-                    <div><small>Nome do animal:</small></div>
-                    <div>a</div>
-                </div>
+            <footer class="bg-custom text-light text-center py-4">
+                <small>© Copyright 2023 - KBR TEC - Todos os Direitos Reservados</small>
+            </footer>
 
-                <div class="col-12">
-                    <div><small>E-mail:</small></div>
-                    <div>{{$solicitante->email}}</div>
-                </div>
-                <div class="col-12">
-                    <div><small>CPF:</small></div>
-                    <div>{{$solicitante->cpf}}</div>
-                </div>
-                <div class="col-12">
-                    <div><small>Celular:</small></div>
-                    <div>{{$solicitante->celular}}</div>
-                </div>
-                <div class="col-12">
-                    <div><small>Data de nascimento:</small></div>
-                    <div>{{$solicitante->data_nas}}</div>
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered text-light">
+                    <div class="modal-content bg-custom">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Usuário</h1>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex flex-wrap row-gap-4">
+                            
+                            <div class="col-6">
+                                <div><small>Solicitante:</small></div>
+                                <div id="solicitanteModal">{{$solicitante->solicitante}}</div>
+                            </div>
+
+                            <div class="col-12">
+                                <div><small>E-mail:</small></div>
+                                <div id="emailModal">{{$solicitante->email}}</div>
+                            </div>
+                            <div class="col-12">
+                                <div><small>CPF:</small></div>
+                                <div id="cpfModal">{{$solicitante->cpf}}</div>
+                            </div>
+                            <div class="col-12">
+                                <div><small>Celular:</small></div>
+                                <div id="celularModal">{{$solicitante->celular}}</div>
+                            </div>
+                            <div class="col-12">
+                                <div><small>Data de nascimento:</small></div>
+                                <div id="dataModal">{{$solicitante->data_nas}}</div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+                integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </body>
+
+<script>
+
+    var buttonsDetails = document.getElementsByClassName('detalhes-solicitacoes')
+
+    Array.from(buttonsDetails).forEach(function(button){
+        button.addEventListener('click', function(){
+            var solicitacao_id = button.dataset.id;
+
+
+            $.ajax({
+                url: `/painel/solicitantes/${solicitacao_id}`,
+                method: 'GET',
+                success: function(response)
+                {
+                    var solicitante = document.getElementById("solicitanteModal");
+                    solicitante.innerHTML = response.solicitante;
+                    var solicitante = document.getElementById("emailModal");
+                    solicitante.innerHTML = response.email;
+                    var solicitante = document.getElementById("cpfModal");
+                    solicitante.innerHTML = response.cpf;
+                    var solicitante = document.getElementById("celularModal");
+                    solicitante.innerHTML = response.celular;
+                    var solicitante = document.getElementById("dataModal");
+                    solicitante.innerHTML = response.data_nas;
+                    
+                },
+                fail: function()
+                {
+                    alert("Erro ao consultar solicitação");
+                }
+            })
+        });
+    });
+
+
+</script>
 
 </html>

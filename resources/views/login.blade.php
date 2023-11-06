@@ -40,7 +40,7 @@
                                 <input type="password" name="password" class="form-control bg-dark border-dark text-light" id="password">
 
     
-                                <a href="#" class="link-light"><small>Esqueci minha senha</small></a>
+                                <a href="{{route('painel-recuperarsenha')}}" class="link-light"><small>Esqueci minha senha</small></a>
                             </div>
     
                             <div class="col-12">

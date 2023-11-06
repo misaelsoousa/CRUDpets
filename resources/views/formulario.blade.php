@@ -3,10 +3,10 @@
 @section('content')
 
 <nav aria-label="breadcrumb" class="p-3 bg-custom-light"> <div class="container">
-    <ol class="breadcrumb m-0"> <li class="breadcrumb-item fs-sm"><a href="{{route('home')}}">Home</a></li> ?li
-        class="breadcrumb-item fs-sm"><a href="{{route('queroadotar')}}">Quero Adotar</a></li> <li
+    <ol class="breadcrumb m-0"> <li class="breadcrumb-item fs-sm"><a href="{{route('home')}}">Home</a></li> 
+    <li class="breadcrumb-item fs-sm"><a href="{{route('queroadotar')}}">Quero Adotar</a></li> <li
         class="breadcrumb-item fs-sm"><a href="{{ route('adotar', ['id'=> request('id'),'nome'=> request('nome')
-    ])}}">Tini</a></li>
+    ])}}"></a>{{request('nome')}}</li>
     <li class="breadcrumb-item active fs-sm" aria-current="page">Formulário de Solicitação</li>
     </ol>
     </div>
@@ -17,8 +17,15 @@
 
         <p class="text-center">Preencha aqui os dados da pessoa interessada em adotar o animal selecionado:</p>
 
-        <form action=" {{route('formulario-store')}}" method="POST"
-            class="bg-custom rounded p-4 mt-4 col-6 mx-auto row">
+        <form action=" {{route('formulario-store')}}" method="POST" class="bg-custom rounded p-4 mt-4 col-6 mx-auto row">
+            @if($errors->any())
+                <ul>
+                    @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            @endif
+
             @csrf
             <div class="form-group py-2 col-12">
             <label for="solicitante" class="text-capitalize text-light">Seu nome:</label>
@@ -45,7 +52,7 @@
 
             <div class="form-group py-2 col-6">
                 <label for="cel" class="text-capitalize text-light">Celular:</label>
-                <input type="text" class="form-control" required name="celular" id="celular">
+                <input type="text" class="form-control" required name="celular" class="telefone" id="celular">
             </div>
 
             <div class="form-group py-2 col-6">
@@ -56,7 +63,7 @@
 
             <div class="mb-3">
                 <div class="g-recaptcha @error('g-recaptcha-response') is-invalid @enderror"
-                    data-sitekey="{{ env('GOOGLE_RECAPTCHA_KEY') }}"></div>
+                    data-sitekey="{{ env('GOOGLE_RECAPTCHA_SITE_KEY') }}"></div>
                 @if ($errors->has('g-recaptcha-response'))
                 <span class="invalid-feedback">
                     <strong>{{ $errors->first('g-recaptcha-response') }}</strong>

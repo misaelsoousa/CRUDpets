@@ -22,4 +22,18 @@ class Pet extends Model
     'status',
     ];
 
+    public function getRules($id = null)
+{
+    $rules = self::$rules;
+
+    if ($id) {
+        // Exclua o registro atual da validação única.
+        $rules['nome'] = 'unique:pets,nome,' . $id;
+        $rules['especie'] = 'unique:pets,especie,' . $id;
+        $rules['idade'] = 'unique:pets,idade,' . $id;
+    }
+
+    return $rules;
+}
+
 }
