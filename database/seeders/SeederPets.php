@@ -13,7 +13,7 @@ class SeederPets extends Seeder
     public function run(): void
     {
             Pet::create([
-            'nome' => 'Fofucha',
+            'nome' => 'Luna',
             'especie' => 'cachorro',
             'raca' => 'vira-lata',
             'idade' => '10',
@@ -50,8 +50,6 @@ class SeederPets extends Seeder
                 'sexo' => 'Masculino',
                 'status' => true,
             ]);
-    
-            // Continue adicionando os outros 10 conjuntos de dados como nos exemplos acima, ajustando os valores para refletir as características específicas de cada animal.
             
             Pet::create([
                 'nome' => 'Mia',
