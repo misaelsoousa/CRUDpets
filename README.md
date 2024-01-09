@@ -22,3 +22,8 @@ php artisan db:seed --class=UserSeeder <br>
 
 
 Leve em conta que o ReCaptcha do Google, precisa de um domínio para funcionar.
+
+Usuário padrão de admin:
+
+Email: misasoousa@gmail.com
+Senha: 12345678
